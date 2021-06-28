@@ -1,0 +1,70 @@
+body {
+    background: url(https://www.wallpapertip.com/wmimgs/26-269742_natural-sci-fi-sky.jpg);
+    background-size: cover;
+    padding-bottom: 20px;
+
+}
+h1{
+    color: lightgrey;
+}
+
+h2  {
+    color:lightgrey;
+    width: 50%;
+    border: 1px solid lightgrey;
+    background-color:  darkslategray;
+    text-align: center;
+    background: url(https://www.wallpapertip.com/wmimgs/22-225176_fondo-de-estrellas-animadas-fondo-de-pantalla-estrellas.jpg);
+    background-size: cover;
+    padding: 20px 700px 10px 650px;
+    margin: 17px 20px 10px 0px;
+
+}
+
+h3  {
+    color: black;
+    border: 1px solid lightgrey;
+    background-color:  rgb(255, 255, 255);
+    background: url(https://english.aawsat.com/sites/default/files/styles/article_img_top/public/2021/05/22/the_solar-powered_rover_touched_martian_soil_at_1040_am_saturday_beijing_time_afp.jpg?itok=X8oXidO_); 
+    background-size: cover;
+    margin: 17px 20px 100px 0px;
+    
+}
+
+p {
+    color: white;
+    font-size: medium;
+    font-family:Georgia, 'Times New Roman', Times, serif
+
+}
+
+  .navbar {
+    margin-bottom: 20px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+  }
+  
+  .left, .right {
+    width: 25%;
+  }
+  
+  .middle {
+    width: 50%;
+  }
+  
+  .carousel-inner {
+      height: 80vh;
+  }
