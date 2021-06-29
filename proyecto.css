@@ -16,55 +16,99 @@ h2  {
     text-align: center;
     background: url(https://www.wallpapertip.com/wmimgs/22-225176_fondo-de-estrellas-animadas-fondo-de-pantalla-estrellas.jpg);
     background-size: cover;
-    padding: 20px 700px 10px 650px;
+    padding: 20px 1000px 10px 917px;
     margin: 17px 20px 10px 0px;
 
 }
 
-h3  {
-    color: black;
-    border: 1px solid lightgrey;
-    background-color:  rgb(255, 255, 255);
-    background: url(https://english.aawsat.com/sites/default/files/styles/article_img_top/public/2021/05/22/the_solar-powered_rover_touched_martian_soil_at_1040_am_saturday_beijing_time_afp.jpg?itok=X8oXidO_); 
-    background-size: cover;
-    margin: 17px 20px 100px 0px;
-    
-}
-
 p {
-    color: white;
-    font-size: medium;
-    font-family:Georgia, 'Times New Roman', Times, serif
-
+  color: white;
+  font-size: medium;
+  font-family:Georgia, 'Times New Roman', Times, serif
 }
 
-  .navbar {
-    margin-bottom: 20px;
-  }
+.navbar {
+  margin-bottom: 20px;
+}
 
-  .column {
-    float: left;
-    width: 50%;
-  }
+.column {
+  float: left;
+  width: 50%;
+}
 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .column {
-    float: left;
-  }
+.column {
+  float: left;
+}
   
-  .left, .right {
-    width: 25%;
-  }
+.left, .right {
+  width: 25%;
+}
   
-  .middle {
-    width: 50%;
-  }
+.middle {
+  width: 50%;
+}
   
-  .carousel-inner {
-      height: 80vh;
-  }
+.carousel-inner {
+  height: 100vh;
+}
+
+#api1 {
+  width: 100%;
+}
+
+#_grid { /* ELEMENTO PADRE, El contenedor, del video y del texto */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#_grid_start {
+  color: white;
+  background-color:  rgb(255, 255, 255);
+  background: url(https://p4.wallpaperbetter.com/wallpaper/531/56/983/space-earth-planet-nasa-wallpaper-preview.jpg); 
+  background-size: cover;
+  margin: 20px;
+  border-radius: .5rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.50);
+  padding: 16px 32px;
+  position: relative; /* esto lo pongo para que los elementos no se salgan del elemento padre */
+  overflow:hidden; /* esto para que los elementos no se salgan pero si los elementos se salen se veran cortados */
+  /* despues te muestro */
+}
+
+/* en CSS, existen pseudo elementos, para decoraciones o ajustes, existen ::after y ::before */
+#_grid_start:before {
+  content: ''; /* si no existe el content, no existe el before. asi que tenes que crearlo se */
+  position: absolute; /* esto para que lo acomodes como vos quieras, el elemento se saldra de sus limites
+  pero no del elemento padre */
+  /* ahora lo tenes que rellenar a todo el elemento padre, con left, right, top y bottom */
+  /* nomás basta con ponerles 0 */
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* vamos a hacer que el background sea un degradado negro de abajo a arriba, empieza desde abajo (0deg) y va en el sentido
+  de las agujas del reloj, hacia la derecha */
+  background: linear-gradient(90deg, black, transparent); /* podes tambien usar valores negativos */
+}
+
+/* veamos los cambios */
+/* ahora tenemos un problema, la sombra tapa el texto, esto se arregla nomas poniendo un relative al H3 */
+#_grid_start > h3 {
+  position: relative;
+  z-index: 2; /* SI, la profundidad del elemento, ya veras */
+}
+
+/* ahora tenemos que ver que se vea bien el texto xd */
+
+/* el grid_end es donde esta el elemento del video */
+#_grid_end {
+  display: flex; /* esto transforma el elemento padre en un elemento flexible, similar a grid pero ajusta automaticamente los elementos hijos */
+  align-items: center; /* centrar de arriba - abajo */
+  justify-content: center; /* centrar de izq - der, si lo queres ajustar a la derecha, usa flex-end */
+}
