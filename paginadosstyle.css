@@ -21,3 +21,13 @@ body {
 #primera_seccion > h3 {
     margin: 1rem;
 }
+
+.flex {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8rem;
+}
+
+.flex > p {
+    color: #888888;
+}
