@@ -39,7 +39,7 @@ p {
   object-fit: cover;
 }
 
-#_grid { /* ELEMENTO PADRE, El contenedor, del video y del texto */
+#_grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -53,41 +53,31 @@ p {
   border-radius: .5rem;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.50);
   padding: 16px 32px;
-  position: relative; /* esto lo pongo para que los elementos no se salgan del elemento padre */
-  overflow:hidden; /* esto para que los elementos no se salgan pero si los elementos se salen se veran cortados */
-  /* despues te muestro */
+  position: relative;
+  overflow:hidden; 
 }
 
-/* en CSS, existen pseudo elementos, para decoraciones o ajustes, existen ::after y ::before */
+
 #_grid_start:before {
-  content: ''; /* si no existe el content, no existe el before. asi que tenes que crearlo se */
-  position: absolute; /* esto para que lo acomodes como vos quieras, el elemento se saldra de sus limites
-  pero no del elemento padre */
-  /* ahora lo tenes que rellenar a todo el elemento padre, con left, right, top y bottom */
-  /* nomás basta con ponerles 0 */
+  content: '';
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  /* vamos a hacer que el background sea un degradado negro de abajo a arriba, empieza desde abajo (0deg) y va en el sentido
-  de las agujas del reloj, hacia la derecha */
-  background: linear-gradient(90deg, black, transparent); /* podes tambien usar valores negativos */
+  background: linear-gradient(90deg, black, transparent);
 }
 
-/* veamos los cambios */
-/* ahora tenemos un problema, la sombra tapa el texto, esto se arregla nomas poniendo un relative al H3 */
 #_grid_start > h3 {
   position: relative;
-  z-index: 2; /* SI, la profundidad del elemento, ya veras */
+  z-index: 2;
 }
 
-/* ahora tenemos que ver que se vea bien el texto xd */
 
-/* el grid_end es donde esta el elemento del video */
 #_grid_end {
-  display: flex; /* esto transforma el elemento padre en un elemento flexible, similar a grid pero ajusta automaticamente los elementos hijos */
-  align-items: center; /* centrar de arriba - abajo */
-  justify-content: center; /* centrar de izq - der, si lo queres ajustar a la derecha, usa flex-end */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
 }
 
 .imgmeteoro {
