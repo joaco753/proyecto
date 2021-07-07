@@ -39,9 +39,16 @@ p {
   object-fit: cover;
 }
 
-#_grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width:1024px){
+  #_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .imgmeteoro {
+    height: 400px;
+    width: 800px;
+  }
 }
 
 #_grid_start {
@@ -80,10 +87,7 @@ p {
   justify-content: center; 
 }
 
-.imgmeteoro {
-  height: 400px;
-  width: 800px;
-}
+
 
 .pseudocont {
   display: flex;
